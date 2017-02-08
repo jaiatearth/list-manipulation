@@ -179,11 +179,12 @@ $(function() {
 
     //Clone a Existing deal..
     function cloneDeal(rowToClone){
-        var rowData = rawData[rowToClone-1];
-        rowData.id = rawData.length + 1;
+        var newObject = JSON.parse(JSON.stringify(rawData));
+        var rowData = newObject[rowToClone-1];
+        rowData.id = newObject.length + 1;
         rawData.push(rowData);
-        listFormation(rowData.id-1, rawData);
-        closeAccordion(rowToClone);
+        $(".table1 tr.redraw, .table2").remove();
+        init();
     }
 
     //Open ACCORDION on particular list click..
@@ -202,9 +203,11 @@ $(function() {
     }
 
     function closePopup(){
+        $('.popup input[type="text"], .popup input[type="text"]').val('');
         $(".popup, .add-deal-popup").addClass("hide");
     }
 
+    //Submit the Edited deal..
     function submitEditedDeal(formValues, formId){
         closePopup();
         //Supply the edited values to Actual deals object..
@@ -216,6 +219,8 @@ $(function() {
         init();
     }
 
+
+    //Submit the New Deal..
     function submitNewDeal(formValues, formId){
         var newRowData = {};
         formValues = $("#add-form").serializeArray();
@@ -254,7 +259,7 @@ $(function() {
 
         //Close POPUP..
         $(document).on("click", ".popup-close", function(){
-           closePopup();
+            closePopup();
         });
 
         //Submitting Edited values..
