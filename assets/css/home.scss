@@ -1,0 +1,165 @@
+.deals{
+    background: $white;
+    .header{
+        @include vertical-center();
+        height: 50px;
+        width: 100%;
+        background-color: $secondary-bg-color;
+        box-shadow: 0 2px 4px 0 rgba(69, 69, 69, 0.5);
+        margin-bottom: 3px;
+        &__logo{
+            margin-left: 14px;
+            width: 10%;
+            img{
+                margin-top: 5px;
+            }
+        }
+        &__items{
+            width: 58%;
+            text-transform: uppercase;
+            font-size: 13px;
+            .label{
+                padding: 7px 7px;
+                cursor: pointer;
+                width: auto;
+                display: inline-block;
+                border: 1px solid $secondary-bg-color;
+                color: #88858A;
+                letter-spacing: .5px;
+                &:hover{
+                    border:1px solid $label-color;
+                    color: #000000;
+                    font-weight: $semibold;
+                }
+            }
+        }
+        &__user-info{
+            margin-right: 4px;
+            text-align: right;
+            width: 30%;
+            color: #88858A;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: .5px;
+            cursor: not-allowed;
+        }
+    }
+    .action-header{
+        height: 100px;
+        background-color: $primary-bg-color;
+        margin-bottom: 4px;
+        color: $text-blue;
+        width: 100%;
+        .section-one{
+            height: 65px;
+            width: 85%;
+            @include vertical-center();
+            margin: 0 auto;
+            .label{
+                width: 50%;
+                color: $text-blue;
+                font-size: 26px;
+            }
+            .search{
+                width: 50%;
+                input{
+                    border: none;
+                    border-bottom: 1px solid #A2C9CC;
+                    background: none;
+                    background-image: url(../images/icons/search-icon.svg);
+                    background-repeat: no-repeat;
+                    font-size: 14px;
+                    background-size: 15px 15px;
+                    background-position: right 3px;
+                    height: 20px;
+                    width: 150px;
+                    font-weight: $light;
+                    letter-spacing: 0.5px;
+                    outline: none;
+                    color: $white;
+                    padding-right: 19px;
+                }
+            }
+        }
+        .section-two{
+            height: 30px;
+            width: 85%;
+            margin: 0 auto;
+            @include vertical-center();
+            align-items: center;
+            .add-deal{
+                width: 50%;
+                font-size: 14px;
+                font-weight: $semibold;
+                letter-spacing: 0.3px;
+                cursor: pointer;
+                text-decoration: underline;
+                letter-spacing: 1px;
+                color: #FFEB3B;
+            }
+            .label{
+                &:hover{
+                    cursor: not-allowed;
+                }
+                width: 50%;
+                font-size: 11px;
+                span{
+                    color: #9A8E7F;
+                    border-right: 1px solid $text-blue;
+                    margin-right: 4px;
+                    padding: 0px 10px;
+                    height: 15px;
+                    display: inline-block;
+
+                }
+            }
+
+        }
+    }
+    .content{
+        padding: 10px 0 0 0;
+        margin-bottom: 60px;
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0 -7px 5px -4px rgba(152, 152, 152, 0.5);
+        .note{
+            width: 85%;
+            margin: 0 auto;
+            font-size: 9px;
+            color: $primary-bg-color;
+            padding-top: 15px;
+        }
+        &__table{
+            padding-top: 25px;
+            width: 85%;
+            margin: 0 auto;
+            @include table-styles();
+            .progress-1 {
+                @include progress-bar-1();
+                .label{
+                    width: 75%;
+                }
+            }
+            .progress-2{
+                @include progress-bar-2();
+                .label{
+                    width: 75%;
+                }
+            }
+
+        }
+    }
+}
+.popup, .add-deal-popup{
+    background: $black;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    top:0;
+    position: fixed;
+    z-index: 999;
+    &__container {
+       @include popup-content();
+    }
+}
+
