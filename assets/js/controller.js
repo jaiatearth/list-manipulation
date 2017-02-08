@@ -145,6 +145,7 @@ $(function() {
 
     function addDeal(){
         $(".add-deal-popup").removeClass("hide");
+        $(".add-deal-popup .popup__content").html("");
         var addString="";
         addString += "<form id=\"add-form\">";
         addString += " <div align=\"center\" class=\"list\"><span class=\"label\">NAME<\/span> <input name=\"name\" type=\"text\" value=\"New Value Direct\"\/><\/div>";
