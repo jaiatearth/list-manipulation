@@ -6,5 +6,5 @@ A static list holder, where we can add/edit/clone the list items.
 ### Implemented Using
 HTML/ SASS+BEM/ CSS/ JQuery/ JSON.
 
-### HOW TO RUN?
+### How to run?
 Open index.html to see the result.
