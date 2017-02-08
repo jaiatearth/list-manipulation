@@ -1,9 +1,9 @@
 # list-manipulation
 
-### What is list-manipulation
+### What is list-manipulation?
 A static list holder, where we can add/edit/clone the list items.
 
-### Implemented Usins
+### Implemented Using
 HTML/ SASS+BEM/ CSS/ JQuery/ JSON.
 
 ### HOW TO RUN?
