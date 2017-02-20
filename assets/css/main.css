@@ -263,6 +263,21 @@ body {
         border-radius: 8px; }
       .deals .content__table .progress-2 .label {
         width: 75%; }
+  .deals .footer {
+    width: 100%;
+    background: #EAEAEA;
+    background: -moz-linear-gradient(top, rgba(190, 190, 190, 0.65) 0%, transparent 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(190, 190, 190, 0.65) 0%, transparent 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(190, 190, 190, 0.65) 0%, transparent 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+    font-size: 11px;
+    color: #88858A;
+    letter-spacing: 0.5px;
+    padding-top: 10px;
+    padding-bottom: 5px; }
 
 .popup, .add-deal-popup {
   background: #000000;
